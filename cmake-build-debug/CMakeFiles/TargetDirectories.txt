@@ -1,0 +1,3 @@
+C:/Users/Eli/Desktop/cline_test/cmake-build-debug/CMakeFiles/cline_test.elf.dir
+C:/Users/Eli/Desktop/cline_test/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Eli/Desktop/cline_test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
