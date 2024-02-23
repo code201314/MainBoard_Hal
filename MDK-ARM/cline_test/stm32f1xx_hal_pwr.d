@@ -23,5 +23,6 @@ cline_test\stm32f1xx_hal_pwr.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ha
 cline_test\stm32f1xx_hal_pwr.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 cline_test\stm32f1xx_hal_pwr.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 cline_test\stm32f1xx_hal_pwr.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+cline_test\stm32f1xx_hal_pwr.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 cline_test\stm32f1xx_hal_pwr.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 cline_test\stm32f1xx_hal_pwr.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h

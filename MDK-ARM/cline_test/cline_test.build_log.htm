@@ -22,34 +22,302 @@ Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
 C:\Users\Eli\Desktop\cline_test\MDK-ARM\cline_test.uvprojx
-Project File Date:  01/23/2024
+Project File Date:  02/15/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'cline_test'
 assembling startup_stm32f103xe.s...
-compiling stm32f1xx_hal_msp.c...
-compiling stm32f1xx_hal_tim_ex.c...
-compiling stm32f1xx_it.c...
-compiling stm32f1xx_hal_tim.c...
-compiling main.c...
 compiling stm32f1xx_hal_gpio_ex.c...
-compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_msp.c...
 compiling stm32f1xx_hal_rcc_ex.c...
-compiling stm32f1xx_hal.c...
-compiling stm32f1xx_hal_rcc.c...
-compiling stm32f1xx_hal_uart.c...
+compiling freertos.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Core/Src/freertos.c: 2 warnings, 4 errors
 compiling stm32f1xx_hal_cortex.c...
-compiling stm32f1xx_hal_pwr.c...
-compiling stm32f1xx_hal_flash.c...
-compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal.c...
+compiling main.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Core/Src/main.c(26): error:  #5: cannot open source input file "driver_mpu6050_basic.h": No such file or directory
+  #include "driver_mpu6050_basic.h"
+../Core/Src/main.c: 2 warnings, 5 errors
+compiling stm32f1xx_it.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Core/Src/stm32f1xx_it.c: 2 warnings, 4 errors
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_rcc.c...
 compiling stm32f1xx_hal_dma.c...
+compiling croutine.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/croutine.c: 2 warnings, 4 errors
+compiling event_groups.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c(240): error:  #18: expected a ")"
+  			portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c(388): error:  #18: expected a ")"
+  			portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c: 2 warnings, 6 errors
+compiling list.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/list.c: 2 warnings, 4 errors
+compiling queue.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(273): error:  #18: expected a ")"
+  					queueYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(818): error:  #18: expected a ")"
+  							queueYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(831): error:  #18: expected a ")"
+  						queueYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(900): error:  #18: expected a ")"
+  					portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(1285): error:  #18: expected a ")"
+  						queueYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(1344): error:  #18: expected a ")"
+  					portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(1448): error:  #18: expected a ")"
+  						queueYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(1536): error:  #18: expected a ")"
+  					portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(1653): error:  #18: expected a ")"
+  						queueYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c(1713): error:  #18: expected a ")"
+  					portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/queue.c: 2 warnings, 14 errors
+compiling stream_buffer.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c: 2 warnings, 4 errors
+compiling tasks.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1090): error:  #18: expected a ")"
+  			taskYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1184): error:  #18: expected a ")"
+  				portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1269): error:  #18: expected a ")"
+  			portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1314): error:  #18: expected a ")"
+  			portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1604): error:  #18: expected a ")"
+  					taskYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1693): error:  #18: expected a ")"
+  				portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(1799): error:  #18: expected a ")"
+  						taskYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(2190): error:  #18: expected a ")"
+  					taskYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(3260): error:  #18: expected a ")"
+  				taskYIELD();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(4430): error:  #18: expected a ")"
+  					portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(4503): error:  #18: expected a ")"
+  					portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c(4641): error:  #18: expected a ")"
+  					taskYIELD_IF_USING_PREEMPTION();
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c: 2 warnings, 16 errors
+compiling timers.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/timers.c(582): error:  #18: expected a ")"
+  					portYIELD_WITHIN_API();
+../Middlewares/Third_Party/FreeRTOS/Source/timers.c: 2 warnings, 5 errors
+compiling heap_4.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c: 2 warnings, 4 errors
+compiling cmsis_os2.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c(522): error:  #18: expected a ")"
+      taskYIELD();
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c(657): error:  #18: expected a ")"
+        portYIELD_FROM_ISR (yield);
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c(1050): error:  #18: expected a ")"
+        portYIELD_FROM_ISR (yield);
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c(1456): error:  #18: expected a ")"
+          portYIELD_FROM_ISR (yield);
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c(1489): error:  #18: expected a ")"
+        portYIELD_FROM_ISR (yield);
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c(1617): error:  #18: expected a ")"
+          portYIELD_FROM_ISR (yield);
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c(1658): error:  #18: expected a ")"
+          portYIELD_FROM_ISR (yield);
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c: 2 warnings, 11 errors
+compiling port.c...
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(180): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(206): error:  #18: expected a ")"
+              : "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(198): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(223): error:  #18: expected a ")"
+              : "=r" ( ulOriginalBASEPRI ), "=r" ( ulNewBASEPRI ) : "i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(214): warning:  #177-D: variable "ulNewBASEPRI"  was declared but never referenced
+          uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h(236): error:  #18: expected a ")"
+              "	msr basepri, %0	"::"r" ( ulNewMaskValue ) : "memory"
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(117): warning:  #1207-D: unknown attribute "naked"
+  void xPortPendSVHandler( void ) __attribute__( ( naked ) );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(119): warning:  #1207-D: unknown attribute "naked"
+  void vPortSVCHandler( void ) __attribute__( ( naked ) );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(124): warning:  #1207-D: unknown attribute "naked"
+  static void prvPortStartFirstTask( void ) __attribute__( ( naked ) );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(168): warning:  #191-D: type qualifier is meaningless on cast type
+      static const volatile uint8_t * const pcInterruptPriorityRegisters = ( const volatile uint8_t * const ) portNVIC_IP_REGISTERS_OFFSET_16;
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(225): warning:  #1267-D: Implicit physical register R3 should be defined as a variable
+          "	ldr	r3, pxCurrentTCBConst2		\n"/* Restore the context. */
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(225): error:  #1086: Operand is wrong type
+          "	ldr	r3, pxCurrentTCBConst2		\n"/* Restore the context. */
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(225): error:  #114: label "pxCurrentTCBConst2"  was referenced but not defined
+          "	ldr	r3, pxCurrentTCBConst2		\n"/* Restore the context. */
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(245): warning:  #1267-D: Implicit physical register R0 should be defined as a variable
+          " ldr r0, =0xE000ED08 	\n"/* Use the NVIC offset register to locate the stack. */
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(245): error:  #29: expected an expression
+          " ldr r0, =0xE000ED08 	\n"/* Use the NVIC offset register to locate the stack. */
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(272): warning:  #191-D: type qualifier is meaningless on cast type
+              volatile uint8_t * const pucFirstUserPriorityRegister = ( volatile uint8_t * const ) ( portNVIC_IP_REGISTERS_OFFSET_16 + portFIRST_USER_INTERRUPT_NUMBER );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(429): error:  #18: expected a ")"
+          ::"i" ( configMAX_SYSCALL_INTERRUPT_PRIORITY )
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c(657): error:  #18: expected a ")"
+          __asm volatile ( "mrs %0, ipsr" : "=r" ( ulCurrentInterrupt )::"memory" );
+../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c: 9 warnings, 9 errors
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_tim_ex.c...
 compiling system_stm32f1xx.c...
 compiling stm32f1xx_hal_exti.c...
-linking...
-Program Size: Code=4612 RO-data=380 RW-data=16 ZI-data=1704  
-FromELF: creating hex file...
-"cline_test\cline_test.axf" - 0 Error(s), 0 Warning(s).
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_uart.c...
+compiling stm32f1xx_hal_i2c.c...
+"cline_test\cline_test.axf" - 90 Error(s), 33 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -72,6 +340,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
+Target not created.
 Build Time Elapsed:  00:00:04
 </pre>
 </body>

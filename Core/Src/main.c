@@ -24,7 +24,12 @@
 /* USER CODE BEGIN Includes */
 #include "string.h"
 #include "driver_mpu6050_basic.h"
+#include "kalman.h"
+#include "driver_ssd1306_basic.h"
 #include "driver_mpu6050_interface.h"
+#include "driver_mpu6050_register_test.h"
+#include "driver_mpu6050_fifo_test.h"
+#include "driver_mpu6050_dmp_read_test.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,6 +48,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
+I2C_HandleTypeDef hi2c2;
 
 UART_HandleTypeDef huart1;
 
@@ -57,13 +63,8 @@ const osThreadAttr_t defaultTask_attributes = {
 osThreadId_t myTask02Handle;
 const osThreadAttr_t myTask02_attributes = {
   .name = "myTask02",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
-/* Definitions for printSemaphore */
-osSemaphoreId_t printSemaphoreHandle;
-const osSemaphoreAttr_t printSemaphore_attributes = {
-  .name = "printSemaphore"
+  .stack_size = 512 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
 
@@ -74,6 +75,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_I2C1_Init(void);
+static void MX_I2C2_Init(void);
 void StartDefaultTask(void *argument);
 void StartTask02(void *argument);
 
@@ -83,8 +85,10 @@ void StartTask02(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-char str[] = "abcdefg123456\r\n";
+char str[] = "statue normal\r\n";
 static int count;
+//float acc[3] = {0};
+//float gyr[3] = {0};
 /* USER CODE END 0 */
 
 /**
@@ -117,8 +121,13 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_I2C1_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
-//    mpu6050_basic_init(MPU6050_ADDRESS_AD0_LOW);
+  mpu6050_basic_init(MPU6050_ADDRESS_AD0_LOW);
+//  mpu6050_register_test(MPU6050_ADDRESS_AD0_LOW);
+//  mpu6050_fifo_test(MPU6050_ADDRESS_AD0_LOW, 100);
+//  mpu6050_dmp_read_test(MPU6050_ADDRESS_AD0_LOW, 100);
+//  ssd1306_basic_init(SSD1306_INTERFACE_IIC, SSD1306_ADDR_SA0_0);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -127,10 +136,6 @@ int main(void)
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
-
-  /* Create the semaphores(s) */
-  /* creation of printSemaphore */
-  printSemaphoreHandle = osSemaphoreNew(1, 1, &printSemaphore_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -192,7 +197,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL9;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -207,7 +212,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
@@ -244,6 +249,40 @@ static void MX_I2C1_Init(void)
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
+
+}
+
+/**
+  * @brief I2C2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C2_Init(void)
+{
+
+  /* USER CODE BEGIN I2C2_Init 0 */
+
+  /* USER CODE END I2C2_Init 0 */
+
+  /* USER CODE BEGIN I2C2_Init 1 */
+
+  /* USER CODE END I2C2_Init 1 */
+  hi2c2.Instance = I2C2;
+  hi2c2.Init.ClockSpeed = 100000;
+  hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c2.Init.OwnAddress1 = 0;
+  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c2.Init.OwnAddress2 = 0;
+  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C2_Init 2 */
+
+  /* USER CODE END I2C2_Init 2 */
 
 }
 
@@ -292,8 +331,8 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
@@ -322,13 +361,24 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
 }
 
 /* USER CODE BEGIN 4 */
+#ifdef __GNUC__
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+#define PUTCHAR_PROTOTYPE int fputc(int ch. FILE *f)
+#endif /* __GNUC__ */
 
+//重定向printf函数
+PUTCHAR_PROTOTYPE
+{
+    HAL_UART_Transmit(&huart1,(uint8_t *)&ch,1,0xFFFF);//输出指向串口USART1
+    return ch;
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -363,9 +413,10 @@ void StartTask02(void *argument)
   /* Infinite loop */
   for(;;)
   {
-      osDelay(1000);
-      mpu6050_interface_debug_print("test%d\n", count++);
-      HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), 1000);
+      osDelay(20);
+//      mpu6050_basic_read(acc,gyr);
+      Angle_Calcu();
+      mpu6050_interface_debug_print("d:%.3f,%.3f,%.3f,%.3f\n", Angle_X_Final, Angle_Y_Final, Angle_x_temp, Angle_y_temp);
   }
   /* USER CODE END StartTask02 */
 }

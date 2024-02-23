@@ -556,11 +556,11 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=cline_test\startup_stm32f103xe.d -ocline_test\startup_stm32f103xe.
-o -I.\RTE\_cline_test -IC:\Keil_v5\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include -IC
-:\Keil_v5\Packs\Keil\STM32F1xx_DFP\1.0.5\Device\Include --predefine="__EVAL SET
-A 1" --predefine="__UVISION_VERSION SETA 528" --predefine="_RTE_ SETA 1" --pred
-efine="STM32F10X_HD SETA 1" --list=startup_stm32f103xe.lst startup_stm32f103xe.
-s
+o -I..\Core\Inc -I.\RTE\_cline_test -IC:\Keil_v5\Packs\ARM\CMSIS\5.5.1\CMSIS\Co
+re\Include -IC:\Keil_v5\Packs\Keil\STM32F1xx_DFP\1.0.5\Device\Include --predefi
+ne="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 528" --predefine="_RTE_ 
+SETA 1" --predefine="STM32F10X_HD SETA 1" --list=startup_stm32f103xe.lst startu
+p_stm32f103xe.s
 
 
 

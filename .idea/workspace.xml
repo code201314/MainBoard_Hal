@@ -20,54 +20,79 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08231473-ac0a-493c-b0da-3b7ddf9a8596" name="更改" comment="&lt;create project&gt; clion+cmake+gcc+cubemx+FreeRTOS">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="08231473-ac0a-493c-b0da-3b7ddf9a8596" name="更改" comment="&lt;add mpu6050&gt; add mpu6050 module and drivers">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f1xx_hal_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f1xx_hal_conf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Inc/stm32f1xx_it.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/stm32f1xx_it.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/stm32f1xx_hal_msp.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f1xx_hal_msp.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/stm32f1xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f1xx_it.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test.uvguix.Eli" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test.uvguix.Eli" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test.uvoptx" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test.uvoptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test.uvprojx" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test.uvprojx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/cline_test.axf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/cline_test.build_log.htm" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/cline_test.build_log.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/cline_test_cline_test.dep" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/cline_test_cline_test.dep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/main.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/main.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/startup_stm32f103xe.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/startup_stm32f103xe.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_cortex.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_cortex.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_cortex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_cortex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_cortex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_cortex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_dma.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_dma.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_dma.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_dma.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_dma.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_dma.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_exti.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_exti.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_exti.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_exti.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_exti.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_exti.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash_ex.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash_ex.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_flash_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio_ex.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio_ex.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_gpio_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_msp.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_msp.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_msp.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_msp.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_msp.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_msp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_pwr.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_pwr.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_pwr.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_pwr.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_pwr.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_pwr.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc_ex.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc_ex.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_rcc_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim_ex.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim_ex.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim_ex.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim_ex.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim_ex.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_tim_ex.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_uart.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_uart.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_uart.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_uart.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_uart.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_hal_uart.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_it.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_it.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_it.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_it.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/stm32f1xx_it.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/system_stm32f1xx.crf" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/system_stm32f1xx.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/system_stm32f1xx.d" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/system_stm32f1xx.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/cline_test/system_stm32f1xx.o" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/cline_test/system_stm32f1xx.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MDK-ARM/startup_stm32f103xe.lst" beforeDir="false" afterPath="$PROJECT_DIR$/MDK-ARM/startup_stm32f103xe.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cline_test.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/cline_test.ioc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0f37e387e6e96f0cfc48.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-01-24T06-16-16-0342.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-cline_test.elf-Debug-224497adc39c552f040d.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.25.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Core/Src/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Core/Src/stm32f1xx_it.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Core/Src/stm32f1xx_it.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cline_test.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cline_test.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cline_test.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cline_test.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cline_test.elf" afterDir="false" />
@@ -86,11 +111,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -117,6 +142,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
@@ -126,15 +152,15 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "CMakeSettings",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="OpenOCD 下载并运行.OCD cline_test">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="cline_test.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="cline_test" TARGET_NAME="cline_test.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="cline_test" RUN_TARGET_NAME="cline_test.elf">
@@ -164,7 +190,8 @@
       <option name="presentableId" value="Default" />
       <updated>1705937139782</updated>
       <workItem from="1705937159523" duration="1745000" />
-      <workItem from="1705974469224" duration="60719000" />
+      <workItem from="1705974469224" duration="61540000" />
+      <workItem from="1707986078172" duration="67252000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;create project&gt; clion+cmake+gcc+cubemx+FreeRTOS">
       <created>1706079960555</created>
@@ -173,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706079960555</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&lt;add mpu6050&gt; add mpu6050 module and drivers">
+      <created>1706361685773</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706361685773</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,17 +238,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&lt;create project&gt; clion+cmake+gcc+cubemx+FreeRTOS" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;create project&gt; clion+cmake+gcc+cubemx+FreeRTOS" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Module/mpu6050/Src/driver_mpu6050_basic.c</url>
-          <line>85</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="&lt;add mpu6050&gt; add mpu6050 module and drivers" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;add mpu6050&gt; add mpu6050 module and drivers" />
   </component>
 </project>

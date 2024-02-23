@@ -24,5 +24,16 @@ cline_test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
 cline_test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 cline_test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 cline_test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+cline_test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 cline_test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 cline_test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+cline_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
+cline_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+cline_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+cline_test\main.o: ../Core/Inc/FreeRTOSConfig.h
+cline_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+cline_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+cline_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+cline_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+cline_test\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+cline_test\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

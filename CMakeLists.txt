@@ -52,7 +52,7 @@ endif ()
 include_directories(Core/Inc Drivers/STM32F1xx_HAL_Driver/Inc Drivers/STM32F1xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include
                     Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 Middlewares/Third_Party/FreeRTOS/Source/include
                     Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang
-                    Module/mpu6050/Inc Module/mpu6050/Src)
+                    Module/mpu6050/Inc Module/mpu6050/Src Module/mpu6050/test Module/mpu6050/filter Module/oled/Inc Module/oled/Src)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xE)
 
